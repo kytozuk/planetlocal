@@ -1,0 +1,28 @@
+{
+  "name": "planetlocal",
+  "version": "1.0.0",
+  "description": "A local HTTP interface for PlanetScale's Javascript Serverless Driver.",
+  "author": "Kevin Yang <@kytozuk>",
+  "homepage": "https://github.com/kytozuk/planetlocal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kytozuk/planetlocal.git"
+  }, 
+  "main": "./src/server.js",
+  "keywords": [
+    "planetscale",
+    "javascript-driver",
+    "serverless",
+    "mysql",
+    "server",
+    "local"
+  ],
+  "bin": {
+    "planetlocal": "./src/cli.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "mysql2": "^3.3.0"
+  },
+  "license": "MIT"
+}
