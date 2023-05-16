@@ -137,6 +137,11 @@ async function query(sql) {
         // Join all values as a long string
         const values = fields.map(({name}) => {
           let value = r[name];
+          if (value === null) {
+            lengths.push(-1);
+            return '';
+          }
+
           value = typeof value === 'string' ? value : `${value}`;
           lengths.push(value.length);
           return value;
