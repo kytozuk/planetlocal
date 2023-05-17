@@ -197,12 +197,9 @@ function extractFields(fields = []) {
     orgTable: f.orgTable,
     database: f.db,
     orgName: f.orgName,
-    /**
-     * Disabled - not in use by @planetscale/database
-     */
-    // columnLength: '',
-    // charset: '',
-    // flags: f.flags,
+    columnLength: f.columnLength,
+    charset: f.characterSet,
+    flags: f.flags,
   }));
 }
 
