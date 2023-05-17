@@ -1,6 +1,6 @@
 {
   "name": "planetlocal",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A local HTTP interface for PlanetScale's Javascript Serverless Driver.",
   "author": "Kevin Yang <@kytozuk>",
   "homepage": "https://github.com/kytozuk/planetlocal",
