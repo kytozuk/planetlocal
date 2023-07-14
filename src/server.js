@@ -237,7 +237,7 @@ async function query(sql) {
           return value;
         });
         return {
-          values: btoa(values.join('')),
+          values: btoa(unescape(encodeURIComponent(values.join('')))),
           lengths,
         }
       }) : [];
