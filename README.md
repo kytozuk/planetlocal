@@ -48,6 +48,9 @@ const transactionResult = await conn.transaction(async (tx) => {
 ```
 
 ## Changelog
+### 1.1.2 (10/13/23)
+- Fixed JSON column value not properly stringified.
+
 ### 1.1.1 (7/14/23)
 - Fixed 'Invalid character' when converting query results with btoa.
 

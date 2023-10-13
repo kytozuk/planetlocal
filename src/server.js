@@ -225,14 +225,18 @@ async function query(sql) {
       const rows = _results?.map ? _results.map(r => {
         const lengths = [];
         // Join all values as a long string
-        const values = fields.map(({name}) => {
+        const values = fields.map(({name, type}) => {
           let value = r[name];
           if (value === null) {
             lengths.push(-1);
             return '';
           }
 
-          value = typeof value === 'string' ? value : `${value}`;
+          if (type === 'JSON') {
+            value = JSON.stringify(value);
+          } else if (typeof value !== 'string') {
+            value = `${value}`;
+          }
           lengths.push(value.length);
           return value;
         });
